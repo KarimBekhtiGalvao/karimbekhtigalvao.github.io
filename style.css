@@ -1,3 +1,90 @@
+/* Reset & basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Hero container fills viewport */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  background: url('images/hero1.jpg') no-repeat center center/cover;
+}
+
+/* Overlay to darken the image for text readability */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark transparent overlay */
+  z-index: 1;
+}
+
+/* Text content container */
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.hero-content .subtitle {
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  max-width: 550px;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: white;
+  color: #1a1d21;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background-color: #ddd;
+}
+
+/* Responsive text size */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+}
+
+
 /* Preloader full screen */
 #preloader {
   position: fixed;
