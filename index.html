@@ -1,21 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Karim Bekhti - Hero Section</title>
-  <link rel="stylesheet" href="style.css">
-</head>
 <body>
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Karim Bekhti</h1>
-      <div class="subtitle">Vision & AI Engineer – Concordia University - Saint-Etienne School of Mines</div>
-      <p>
-        French Engineer, finishing the master of Computer Science of Concordia University. Voracious reader, amateur pianist, history buff, curious about everything, environmentally conscious.
-      </p>
-      <a href="#work" class="btn">WORK WITH ME</a>
-    </div>
-  </section>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="content" style="display:none;">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Karim Bekhti</h1>
+        <div class="subtitle">Vision & AI Engineer – Concordia University - Saint-Etienne School of Mines</div>
+        <p>
+          French Engineer, finishing the master of Computer Science of Concordia University. Voracious reader, amateur pianist, history buff, curious about everything, environmentally conscious.
+        </p>
+        <a href="#work" class="btn">WORK WITH ME</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- JS to hide loader -->
+  <script>
+    window.addEventListener("load", function() {
+      setTimeout(function() {
+        document.getElementById("preloader").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      }, 1500); // delay in milliseconds
+    });
+  </script>
 </body>
-</html>
