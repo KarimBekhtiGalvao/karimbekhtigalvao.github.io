@@ -11,28 +11,32 @@ body {
   color: #fff;
   line-height: 1.6;
 }
+
 /* Hero Section */
 .hero {
   position: relative;
   width: 100%;
-  height: 500px;               /* Set desired hero height */
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  height: 100vh;               /* full viewport height */
+  display: flex;               /* must be "flex" */
+  align-items: flex-end;       /* stick content to bottom */
+  justify-content: flex-start;   /* align content right */
   padding: 50px;
   color: #fff;
   overflow: hidden;
 
   background-image: url("../images_web/home.png");
-  background-size: 100%;       /* 100% = normal, 150% = zoomed in, 50% = zoomed out */
-  background-position: center;
+  background-size: cover;       
+  background-position: center;  
   background-repeat: no-repeat;
+
+  /* Make background fixed */
+  background-attachment: fixed; 
   z-index: 0;
 }
 
 .hero * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-text {
@@ -46,7 +50,7 @@ body {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.2); /* dark overlay */
+  background: rgba(0, 0, 0, 0.2); 
   z-index: 1;
 }
 
@@ -67,6 +71,7 @@ body {
   position: relative;
   z-index: 2;
 }
+
 /*Welcome*/
 /* ---------- Forced Welcome layout (drop-in) ---------- */
 .Welcome {
